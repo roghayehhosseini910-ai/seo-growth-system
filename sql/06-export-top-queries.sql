@@ -1,0 +1,1 @@
+\copy ( SELECT query, SUM(clicks) AS clicks, SUM(impressions) AS impressions, ROUND(SUM(clicks)::numeric / NULLIF(SUM(impressions),0), 4) AS ctr, ROUND(AVG(position)::numeric, 2) AS avg_position FROM gsc_performance GROUP BY query ORDER BY clicks DESC LIMIT 50 ) TO '/data/top_queries.csv' WITH (FORMAT csv, HEADER true);

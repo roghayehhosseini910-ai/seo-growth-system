@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: seo
+      POSTGRES_PASSWORD: seo
+      POSTGRES_DB: seodb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql:/sql
+      - ./data:/data
+
+
+
+  ml:
+    build:
+      context: .
+      dockerfile: ml/dockerfile
+    volumes:
+      - .:/app
+      - ./data:/data
+    depends_on:
+      - db
+
+
+volumes:
+  pgdata:

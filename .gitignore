@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env
+
+# Data artifacts
+data/artifacts/*.joblib
+data/artifacts/*.csv
+data/artifacts/*.json
+
+# Decision outputs
+data/decisions/*.csv
+data/decisions/*.jsonl
+
+# OS / IDE
+.vscode/
+.DS_Store
+
+# Docker
+postgres-data/
+
+# Generated reports
+data/*.csv
+
+# ML artifacts
+data/artifacts/
+
+# Decisions
+data/decisions/

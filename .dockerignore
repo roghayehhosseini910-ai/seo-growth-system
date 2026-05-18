@@ -1,0 +1,21 @@
+# python
+__pycache__/
+*.pyc
+
+# git
+.git/
+.gitignore
+
+# venv
+.venv/
+env/
+
+# vscode
+.vscode/
+
+# docker
+Dockerfile
+
+# ignore heavy data but allow csv
+data/*.tmp
+data/*.log
