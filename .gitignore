@@ -6,32 +6,33 @@ __pycache__/
 venv/
 .env
 
-# Data artifacts
-data/artifacts/*.joblib
-data/artifacts/*.csv
-data/artifacts/*.json
+# Secrets
+.secrets/
+credentials.json
+token.json
+token.pickle
 
-# Decision outputs
-data/decisions/*.csv
-data/decisions/*.jsonl
-
-# OS / IDE
+# VS Code / OS
 .vscode/
 .DS_Store
 
 # Docker
 postgres-data/
 
-# Generated reports
-data/*.csv
-
 # ML artifacts
 data/artifacts/
+data/artifacts/*.joblib
+data/artifacts/*.csv
+data/artifacts/*.json
 
-# Decisions
+# Generated decision outputs
 data/decisions/
+data/decisions/*.csv
+data/decisions/*.jsonl
 
-# Secrets
-.secrets/
-credentials.json
-token.json
+# Real SEO data
+data/gsc_real.csv
+
+# Temporary exports
+*.log
+*.tmp
